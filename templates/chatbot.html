@@ -1,0 +1,99 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<title>AI Admission Assistant</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+</head>
+
+<body>
+
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+{% if messages %}
+<script>
+{% for message in messages %}
+Swal.fire({
+title: "{{ message }}",
+icon: "{% if message.tags == 'success' %}success{% elif message.tags == 'error' %}error{% else %}info{% endif %}",
+confirmButtonText: "OK"
+});
+{% endfor %}
+</script>
+{% endif %}
+
+<div class="app">
+
+<!-- SIDEBAR -->
+
+<div class="sidebar">
+
+<div class="logo">
+🎓 GCE Bodi
+<p>Admission Assistant</p>
+</div>
+
+<a class="new-chat" href="{% url 'new_chat' %}">+ New Chat</a>
+
+<a class="logout" href="/logout/">Logout</a>
+
+</div>
+
+
+<!-- MAIN CHAT AREA -->
+
+<div class="chat-area">
+
+<div class="chat-header">
+AI College Admission Assistant
+</div>
+
+<div class="chat-messages" id="chat-box">
+
+{% for chat in chats %}
+
+<div class="message user">
+{{ chat.question }}
+</div>
+
+<div class="message bot">
+{{ chat.response|safe }}
+</div>
+
+{% endfor %}
+
+<!-- typing indicator -->
+
+<div id="typing" class="typing" style="display:none;">
+<span></span>
+<span></span>
+<span></span>
+</div>
+
+</div>
+
+
+<form method="POST" class="chat-input" id="chat-form">
+
+{% csrf_token %}
+
+<input type="text" name="question" placeholder="Ask anything about admissions..." required>
+
+<button type="submit">Send</button>
+
+</form>
+
+</div>
+
+</div>
+
+<script src="{% static 'js/chatbot.js' %}"></script>
+
+</body>
+</html>
