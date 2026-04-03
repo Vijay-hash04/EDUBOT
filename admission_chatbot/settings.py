@@ -54,10 +54,10 @@ WSGI_APPLICATION = 'admission_chatbot.wsgi.application'
 DATABASES = {
 'default': {
 'ENGINE': 'django.db.backends.mysql',
-'NAME': 'chatbot_db',
-'USER': 'root',
-'PASSWORD': 'Vijay@2004',
-'HOST': 'localhost',
+'NAME': 'your_db_name',
+'USER': 'your_user_name',
+'PASSWORD': 'your_password',
+'HOST': 'your_db_host',
 'PORT': '3306',
 }
 }
