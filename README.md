@@ -52,22 +52,6 @@ The application uses Google's Gemini AI API to understand natural language quest
 * PyPDF
 * mysqlclient / PyMySQL
 
-
-📂 Project Structure
-
-Admission-Chatbot/
-│
-├── admission_chatbot/
-├── chatbot/
-├── templates/
-├── static/
-├── media/
-├── manage.py
-├── requirements.txt
-├── .env
-└── README.md
-
-
 ⚙️ **Installation**
 
 1. Clone the repository
