@@ -1,6 +1,6 @@
-🎓 EDUBOT: Streamlining Higher Education Admissions with Conversational AI
+🎓** EDUBOT: Streamlining Higher Education Admissions with Conversational AI**
 
-📌 Project Overview
+📌 **Project Overview**
 
 This is a web application designed to assist students by providing instant and accurate information about college admissions. Instead of manually searching through multiple web pages, users can interact with an AI-powered chatbot to receive details about courses, eligibility, fees, admission deadlines, placement information, scholarships, hostel facilities, and other campus-related queries.
 The application uses Google's Gemini AI API to understand natural language questions and generate intelligent responses. It provides a simple, user-friendly interface that improves the admission enquiry experience for students and reduces repetitive work for college staff.
@@ -157,7 +157,6 @@ Python Full Stack Developer
 * REST APIs
 * Google Gemini API
 
-
-📜 License
+📜 **License**
 
 This project is developed for educational and learning purposes. You are free to modify and extend it according to your requirements.
